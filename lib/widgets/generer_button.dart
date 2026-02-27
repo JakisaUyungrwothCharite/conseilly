@@ -12,7 +12,7 @@ class GenererButton extends StatelessWidget {
       color: Color(0xFF766826),
       height: 80,
       child: Text(
-        "generer",
+        "actualiser",
         style: GoogleFonts.inter(color: Colors.white, fontSize: 24),
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),

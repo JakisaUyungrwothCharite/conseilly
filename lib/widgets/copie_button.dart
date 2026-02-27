@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CopieButton extends StatelessWidget {
+class CopyButton extends StatelessWidget {
   final void Function() onPressed;
-  const CopieButton({super.key, required this.onPressed});
+  const CopyButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

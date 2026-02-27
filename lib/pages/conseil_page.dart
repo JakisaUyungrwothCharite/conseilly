@@ -2,6 +2,7 @@ import 'package:advicely/data/model.dart';
 import 'package:advicely/widgets/copie_button.dart';
 import 'package:advicely/widgets/generer_button.dart';
 import 'package:advicely/widgets/panneau_central.dart';
+import 'package:advicely/widgets/traduire_button.dart';
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -53,7 +54,7 @@ class _ConseilPageState extends State<ConseilPage> {
                 ),
               ),
               SizedBox(height: 30),
-              panneauCentral,
+              SingleChildScrollView(child: panneauCentral),
               SizedBox(height: 30),
               Row(
                 children: [
@@ -65,7 +66,7 @@ class _ConseilPageState extends State<ConseilPage> {
                     ),
                   ),
                   SizedBox(width: 30),
-                  CopieButton(
+                  CopyButton(
                     onPressed: () async {
                       try {
                         await FlutterClipboard.copy(panneauCentral.texte);
@@ -74,6 +75,21 @@ class _ConseilPageState extends State<ConseilPage> {
                   ),
                 ],
               ),
+
+            Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButtonTraduire(
+                      onPressed: () {
+                        setState(() {}); //actualise la page
+                      },
+                    ),
+                  ),
+                  SizedBox(width:5,),
+              
+                ],
+              ),
+
             ],
           ),
         ),
